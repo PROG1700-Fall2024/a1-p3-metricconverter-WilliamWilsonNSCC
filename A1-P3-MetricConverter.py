@@ -16,7 +16,7 @@ def main():
     ounces=int(input("Enter the number of ounces: "))
     
     #total ounces = 35840 * tons + 224 * stone + 16 * pounds + ounces 
-    totalOunces=35840*tons+224*stones+16*2+ounces
+    totalOunces=35840*tons+224*stones+16*pounds+ounces
     # print(totalOunces)
     
     # total kilos = total ounces / 35.274
@@ -27,18 +27,19 @@ def main():
     metricTons= int(totalKilos/1000)
 
     #1 ton = 1000kg 
-    kilos= (totalKilos%1000)
+    kilos= int(totalKilos%1000)
     print(kilos) 
-    
+    kilosRemainder=(totalKilos%1000)
+    print(kilosRemainder)
+    kilosDecimal=kilosRemainder-kilos
+    print(kilosDecimal)
     #1kilo = 1000grams
-    remainder= kilos%int(kilos)
-    print(remainder)
-    
-    grams= remainder * 1000
+
+    grams= kilosDecimal * 1000
     print(grams)
     
     # output metric weight in tons, kilos, and grams
-    print("The metric weight is {0} metric tons, {1:.0f} kilos, and {2:.1f} grams".format(metricTons, kilos, grams))
+    print("The metric weight is {0} metric tons, {1} kilos, and {2:.1f} grams".format(metricTons, kilos, grams))
 
     # YOUR CODE ENDS HERE
 
