@@ -10,12 +10,12 @@ Description: Assignment 1 Metric Converter
 
 def main():
     # numbers of tons, stones, pounds, and ounces are input by the user
-    tons= int(input("1"))
-    stones=int(input("2"))
-    pounds=int(input("3"))
-    ounces=int(input("4"))
+    tons= int(input("Enter the number of tons: "))
+    stones=int(input("Enter the number of stone: "))
+    pounds=int(input("Enter the number of pounds: "))
+    ounces=int(input("Enter the number of ounces: "))
     
-    #total ounces = 35840 * tons + 224 * stone + 16 * pounds + ounces 5/20/2/4
+    #total ounces = 35840 * tons + 224 * stone + 16 * pounds + ounces 
     totalOunces=35840*tons+224*stones+16*2+ounces
     # print(totalOunces)
     
@@ -28,7 +28,7 @@ def main():
 
     #1 ton = 1000kg 
     kilos= (totalKilos%1000)
-    print(kilos) #288
+    print(kilos) 
     
     #1kilo = 1000grams
     remainder= kilos%int(kilos)
@@ -39,7 +39,7 @@ def main():
     
     # output metric weight in tons, kilos, and grams
     print("The metric weight is {0} metric tons, {1:.0f} kilos, and {2:.1f} grams".format(metricTons, kilos, grams))
-    
+
     # YOUR CODE ENDS HERE
 
 main()
